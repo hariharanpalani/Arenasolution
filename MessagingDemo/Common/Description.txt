@@ -1,0 +1,42 @@
+﻿Standard Queue:
+----------------
+1. Normal implementation of Messsaging with RabbitMQ
+2. Connect and fetch the message count
+3. Process the message.
+4. Queue name will be considered as Routing key.
+
+Worker Queue:
+--------------
+1. Publish all the messages as like Standard queue.
+2. While Consuming set the acknowledgement required and count of messages to be processed.
+3. Process the message.
+
+Publish/Subscribe
+---------------------
+1. Declare the exchange and type as "fanout"
+2. Publish all the messages to exchange
+3. Consume messages using dynamic queue declared. (No name will be passed)
+4. All the consumers will be notified.
+
+Direct Routing
+----------------
+1. Create connections
+2. Declare exchange as direct
+3. Declare queue with durable.
+4. Queue Bind with routing key.
+5. Set the Qos for number of message to delivered.
+6. Read the message and acknowledge it.
+
+
+microservices
+-----------------
+1. Technology diversity
+2. Resilience - recover quickly
+3. Scaling
+4. Easy Deployments
+
+Scaling
+----------
+x-axis - traditional load balancer scenario
+y-axis -> Functional Decomposition / Scale by spliting different functionalities.
+Z-axis -> data partitioning scaling by splitting data.
